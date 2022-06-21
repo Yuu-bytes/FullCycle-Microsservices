@@ -123,7 +123,7 @@ namespace FC.Codefix.Catalog.UnitTests.Domain.Entity.Category
             Action action = () => new DomainEntity.Category(validCategory.Name, invalidDescription);
             action.Should()
                 .Throw<EntityValidationException>()
-                .WithMessage("Description should be less or equal 10.000 characters long!");
+                .WithMessage("Description should be less or equal 10000 characters long!");
         }
 
         [Fact(DisplayName = nameof(Activate))]
@@ -241,7 +241,7 @@ namespace FC.Codefix.Catalog.UnitTests.Domain.Entity.Category
 
             action.Should()
                 .Throw<EntityValidationException>()
-                .WithMessage("Description should be less or equal 10.000 characters long!");
+                .WithMessage("Description should be less or equal 10000 characters long!");
         }
     }
 }

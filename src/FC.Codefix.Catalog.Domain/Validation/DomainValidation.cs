@@ -16,7 +16,7 @@ namespace FC.Codefix.Catalog.Domain.Validation
         {
             if (String.IsNullOrWhiteSpace(target))
             {
-                throw new EntityValidationException($"{fieldName} should not be null or empty!");
+                throw new EntityValidationException($"{fieldName} should not be empty or null!");
             }
         }
 
@@ -24,7 +24,7 @@ namespace FC.Codefix.Catalog.Domain.Validation
         {
             if (target.Length < minLength)
             {
-                throw new EntityValidationException($"{fieldName} should not be less than {minLength} characters long!");
+                throw new EntityValidationException($"{fieldName} should be at leats {minLength} characters long!");
             }
         }
 
@@ -32,7 +32,7 @@ namespace FC.Codefix.Catalog.Domain.Validation
         {
             if (target.Length > maxLength)
             {
-                throw new EntityValidationException($"{fieldName} should not be greater than {maxLength} characters long!");
+                throw new EntityValidationException($"{fieldName} should be less or equal {maxLength} characters long!");
             }
         }
     }

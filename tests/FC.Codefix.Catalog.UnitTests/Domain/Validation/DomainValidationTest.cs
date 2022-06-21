@@ -48,7 +48,7 @@ namespace FC.Codefix.Catalog.UnitTests.Domain.Validation
             
             action.Should()
                 .Throw<EntityValidationException>()
-                .WithMessage($"{fieldName} should not be null or empty!");
+                .WithMessage($"{fieldName} should not be empty or null!");
         }
 
         [Fact(DisplayName = nameof(NotNullOrEmptyOk))]
@@ -74,7 +74,7 @@ namespace FC.Codefix.Catalog.UnitTests.Domain.Validation
 
             action.Should()
                 .Throw<EntityValidationException>()
-                .WithMessage($"{fieldName} should not be less than {minLength} characters long!");
+                .WithMessage($"{fieldName} should be at leats {minLength} characters long!");
         }
 
         public static IEnumerable<object[]> GetValuesSmallerThanMin(int numberOfTests = 5)
@@ -124,7 +124,7 @@ namespace FC.Codefix.Catalog.UnitTests.Domain.Validation
 
             action.Should()
                 .Throw<EntityValidationException>()
-                .WithMessage($"{fieldName} should not be greater than {maxLength} characters long!");
+                .WithMessage($"{fieldName} should be less or equal {maxLength} characters long!");
         }
 
         public static IEnumerable<object[]> GetValuesGreaterThanMax(int numberOfTests = 5)
