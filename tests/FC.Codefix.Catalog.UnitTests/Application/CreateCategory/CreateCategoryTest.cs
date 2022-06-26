@@ -1,4 +1,5 @@
 ﻿using FC.Codefix.Catalog.Domain.Entity;
+using FC.Codefix.Catalog.Domain.Repository;
 using Moq;
 using Xunit;
 using UseCases = FC.Codefix.Catalog.Application.UseCases.CreateCategory;
@@ -19,7 +20,7 @@ namespace FC.Codefix.Catalog.UnitTests.Application.CreateCategory
 
             var output = await useCase.Handle(input, CancellationToken.None);
 
-            repositoryMock.Verify(repository => repository.Create(
+            repositoryMock.Verify(repository => repository.Insert(
                     It.IsAny<Category>(),
                     It.IsAny<CancellationToken>()
                 ), Times.Once);
