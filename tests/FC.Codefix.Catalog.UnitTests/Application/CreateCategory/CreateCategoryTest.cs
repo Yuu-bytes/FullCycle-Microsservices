@@ -1,5 +1,6 @@
 ﻿using FC.Codefix.Catalog.Domain.Entity;
 using FC.Codefix.Catalog.Domain.Repository;
+using FC.Codeflix.Catalog.Application.Interfaces;
 using Moq;
 using Xunit;
 using UseCases = FC.Codefix.Catalog.Application.UseCases.CreateCategory;
