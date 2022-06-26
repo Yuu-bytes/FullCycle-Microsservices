@@ -1,11 +1,12 @@
-﻿using FC.Codefix.Catalog.Domain.Entity;
-using FC.Codefix.Catalog.Domain.Repository;
+﻿using FC.Codeflix.Catalog.Domain.Entity;
+using FC.Codeflix.Catalog.Domain.Repository;
 using FC.Codeflix.Catalog.Application.Interfaces;
 using Moq;
 using Xunit;
-using UseCases = FC.Codefix.Catalog.Application.UseCases.CreateCategory;
+using UseCases = FC.Codeflix.Catalog.Application.UseCases.Category.CreateCategory;
+using FluentAssertions;
 
-namespace FC.Codefix.Catalog.UnitTests.Application.CreateCategory
+namespace FC.Codeflix.Catalog.UnitTests.Application.CreateCategory
 {
     public class CreateCategoryTest
     {
@@ -17,7 +18,7 @@ namespace FC.Codefix.Catalog.UnitTests.Application.CreateCategory
             var unitOfWorkMock = new Mock<IUnitOfWork>();
             var useCase = new UseCases.CreateCategory(repositoryMock.Object, unitOfWorkMock.Object);
 
-            var input = CreateCategoryInput("Category Name", "Category Description", true);
+            var input = new UseCases.CreateCategoryInput("Category Name", "Category Description", true);
 
             var output = await useCase.Handle(input, CancellationToken.None);
 
@@ -30,11 +31,11 @@ namespace FC.Codefix.Catalog.UnitTests.Application.CreateCategory
                 ), Times.Once);
 
             output.Should().NotBeNull();
-            output.Name().Should().Be("Category Name");
-            output.Description().Should().Be("Category Description");
-            output.IsActive().Should().Be(true);
-            (output.Id != null && output.Id != Guid.Empty).Should().BeTrue();
-            (output.CreatedAt != null && output.CreatedAt != default(DateTime)).Should().BeTrue();
+            output.Name.Should().Be("Category Name");
+            output.Description.Should().Be("Category Description");
+            output.IsActive.Should().Be(true);
+            output.Id.Should().NotBeEmpty();
+            output.CreatedAt.Should().NotBeSameDateAs(default(DateTime));
         }
     }
 }

@@ -1,6 +1,6 @@
-﻿using FC.Codefix.Catalog.Domain.Exceptions;
+﻿using FC.Codeflix.Catalog.Domain.Exceptions;
 
-namespace FC.Codefix.Catalog.Domain.Validation
+namespace FC.Codeflix.Catalog.Domain.Validation
 {
     public class DomainValidation
     {

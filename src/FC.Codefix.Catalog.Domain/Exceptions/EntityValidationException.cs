@@ -1,4 +1,4 @@
-﻿namespace FC.Codefix.Catalog.Domain.Exceptions
+﻿namespace FC.Codeflix.Catalog.Domain.Exceptions
 {
     public class EntityValidationException : Exception
     {

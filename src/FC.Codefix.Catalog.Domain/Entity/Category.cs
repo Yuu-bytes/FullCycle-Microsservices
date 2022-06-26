@@ -1,8 +1,7 @@
-﻿using FC.Codefix.Catalog.Domain.Exceptions;
-using FC.Codefix.Catalog.Domain.SeedWork;
-using FC.Codefix.Catalog.Domain.Validation;
+﻿using FC.Codeflix.Catalog.Domain.SeedWork;
+using FC.Codeflix.Catalog.Domain.Validation;
 
-namespace FC.Codefix.Catalog.Domain.Entity
+namespace FC.Codeflix.Catalog.Domain.Entity
 {
     public class Category : AggregateRoot
     {

@@ -1,10 +1,10 @@
 ﻿using Bogus;
 using Xunit;
-using FC.Codefix.Catalog.Domain.Validation;
+using FC.Codeflix.Catalog.Domain.Validation;
 using FluentAssertions;
-using FC.Codefix.Catalog.Domain.Exceptions;
+using FC.Codeflix.Catalog.Domain.Exceptions;
 
-namespace FC.Codefix.Catalog.UnitTests.Domain.Validation
+namespace FC.Codeflix.Catalog.UnitTests.Domain.Validation
 {
     public class DomainValidationTest
     {

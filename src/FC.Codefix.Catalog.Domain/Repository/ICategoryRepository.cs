@@ -1,7 +1,7 @@
-﻿using FC.Codefix.Catalog.Domain.Entity;
-using FC.Codefix.Catalog.Domain.SeedWork;
+﻿using FC.Codeflix.Catalog.Domain.Entity;
+using FC.Codeflix.Catalog.Domain.SeedWork;
 
-namespace FC.Codefix.Catalog.Domain.Repository
+namespace FC.Codeflix.Catalog.Domain.Repository
 {
     public interface ICategoryRepository : IGenericRepository<Category>
     { 

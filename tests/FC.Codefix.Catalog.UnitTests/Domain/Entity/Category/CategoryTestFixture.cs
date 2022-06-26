@@ -1,8 +1,8 @@
-﻿using FC.Codefix.Catalog.UnitTests.Commun;
+﻿using FC.Codeflix.Catalog.UnitTests.Commun;
 using Xunit;
-using DomainEntity = FC.Codefix.Catalog.Domain.Entity;
+using DomainEntity = FC.Codeflix.Catalog.Domain.Entity;
 
-namespace FC.Codefix.Catalog.UnitTests.Domain.Entity.Category
+namespace FC.Codeflix.Catalog.UnitTests.Domain.Entity.Category
 {
     public class CategoryTestFixture : BaseFixture
     {
